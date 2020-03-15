@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+
+    <title>Weather Dashboard </title>
+</head>
+
+<nav id="navbar" class="navbar navbar-light bg-light">
+    <p> Weather Dashboard</p>
+
+    <!-- <a class="navbar-brand" href="#">
+      <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+    </a> -->
+</nav>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- column one search bar and prev searches -->
+            <div class="col-3">
+                <div class="row">
+                    <h4> Search for a city:</h4>
+                </div>
+                <div class="row">
+                    <input id="inputbox">
+                    <button id="searchbtn">Submit</button>
+                </div>
+                <div id="recent" class="row">
+                    <h4>Recent Searches: </h4>
+                </div>
+            </div>
+
+            <!-- column two forcast info -->
+            <div class="col-8">
+                <!-- sub row 1  -->
+                <div class="row">
+                    <div class="col" style="margin: 5px;">
+                        <div class="card" >
+                            
+                            <div class="card-body" >
+                                <h5 id="City" class="card-title">City:</h5>
+                                <p id="today" class="card-text">Date:</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li id="temp" class="list-group-item">Temp</li>
+                                <li id="humidity" class="list-group-item">Humidity</li>
+                                <li id="" class="list-group-item">?????????</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col" style="margin: 5px;">
+                        <img src="..." class="card-img-top" alt="...">
+                    </div>
+
+                </div>
+
+
+                <!-- sub row 2  -->
+                <div class="row">
+                    <h4>5-Day Forcast</h4>
+                </div>
+
+
+                <!-- sub row 3 for 5 day forcast cards-->
+                <div id="forcast" class="row">
+                    <!-- day 1 -->
+                    <div id="1" class="card" style="width: 175px;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="date" class="card-title">Date</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li id="temp" class="list-group-item">Temp</li>
+                            <li id="humidity" class="list-group-item">Humidity</li>
+                            <li id="" class="list-group-item">?????????</li>
+                        </ul>
+                    </div>
+
+                    <!-- day 2 -->
+                    <div id="2" class="card" style="width: 175px;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="date" class="card-title">Date</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li id="temp" class="list-group-item">Temp</li>
+                            <li id="humidity" class="list-group-item">Humidity</li>
+                            <li id="" class="list-group-item">?????????</li>
+                        </ul>
+                    </div>
+
+                    <!-- day 3 -->
+                    <div id="3" class="card" style="width: 175px;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="date" class="card-title">Date</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li id="temp" class="list-group-item">Temp</li>
+                            <li id="humidity" class="list-group-item">Humidity</li>
+                            <li id="" class="list-group-item">?????????</li>
+                        </ul>
+                    </div>
+
+                    <!-- day 4 -->
+                    <div id="4" class="card" style="width: 175px;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="date" class="card-title">Date</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li id="temp" class="list-group-item">Temp</li>
+                            <li id="humidity" class="list-group-item">Humidity</li>
+                            <li id="" class="list-group-item">?????????</li>
+                        </ul>
+                    </div>
+
+                    <!-- day 5 -->
+                    <div id="5" class="card" style="width: 175px;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 id="date" class="card-title">Date</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li id="temp" class="list-group-item">Temp</li>
+                            <li id="humidity" class="list-group-item">Humidity</li>
+                            <li id="" class="list-group-item">?????????</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Code to the JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+
+
+
+</html>
