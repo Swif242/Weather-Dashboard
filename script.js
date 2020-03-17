@@ -10,15 +10,26 @@ var todayWind = document.getElementById("currentwind");
 var todayIndex = document.getElementById("currentindex");
 var todayCloud = document.getElementById("currentcloud");
 
-// 5 day forecast variables
-// var dayOne = document.getElementById("1");
-// var dayTwo = document.getElementById("2");
-// var dayThree = document.getElementById("3");
-// var dayFour = document.getElementById("4");
-// var dayFive = document.getElementById("5");
+// 5 day forecast dates variables
+var dateOne = document.getElementById("1");
+$(dateOne).text("Date: " + moment().add(1, "day").format("MMM-DD-YYYY"));
+
+var dateTwo = document.getElementById("2");
+$(dateTwo).text("Date: " + moment().add(2, "day").format("MMM-DD-YYYY"));
+
+var dateThree = document.getElementById("3");
+$(dateThree).text("Date: " + moment().add(3, "day").format("MMM-DD-YYYY"));
+
+var dateFour = document.getElementById("4");
+$(dateFour).text("Date: " + moment().add(4, "day").format("MMM-DD-YYYY"));
+
+var dateFive = document.getElementById("5");
+$(dateFive).text("Date: " + moment().add(5, "day").format("MMM-DD-YYYY"));
 
 // setting the current date
 $(today).text("Today is: " + currentDate);
+
+
 
 var days = [
     {
@@ -29,37 +40,7 @@ var days = [
         cloud: "Clouds: ",
     },
 
-    // {
-    //     temp : 
-    //     humidity : 
-    //     wind :
-    //     index :
-    //     cloud :
-    // },
-
-    // {
-    //     temp : 
-    //     humidity : 
-    //     wind :
-    //     index :
-    //     cloud :
-    // },
-
-    // {
-    //     temp : 
-    //     humidity : 
-    //     wind :
-    //     index :
-    //     cloud :
-    // },
-
-    // {
-    //     temp : 
-    //     humidity : 
-    //     wind :
-    //     index :
-    //     cloud :
-    // }
+    
 ]
 
 $(submit).on("click", function (event) {
@@ -144,7 +125,7 @@ $(submit).on("click", function (event) {
             // $("#index-5").text(days[0].index + dayFive.main.temp);
             $("#cloud-5").text(days[0].cloud + dayFive.clouds.all);
 
-            
+
 
 
 
