@@ -29,6 +29,25 @@ $(dateFive).text("Date: " + moment().add(5, "day").format("MMM-DD-YYYY"));
 // setting the current date
 $(today).text("Today is: " + currentDate);
 
+// icon variables 
+var clearSkyDay = "http://openweathermap.org/img/wn/01d@2x.png";
+var clearSkyNight = "http://openweathermap.org/img/wn/01n@2x.png";
+var fewCloudsDay = "http://openweathermap.org/img/wn/02d@2x.png";
+var fewCloudsNight = "http://openweathermap.org/img/wn/02n@2x.png";
+var scatterdClouds = "http://openweathermap.org/img/wn/03d@2x.png";
+var brokenClouds = "http://openweathermap.org/img/wn/04d@2x.png";
+var showerRain = "http://openweathermap.org/img/wn/09d@2x.png";
+var rainDay = "http://openweathermap.org/img/wn/10d@2x.png";
+var rainNight = "http://openweathermap.org/img/wn/10n@2x.png";
+var thunderStorm = "http://openweathermap.org/img/wn/11d@2x.png";
+var snow = "http://openweathermap.org/img/wn/13d@2x.png";
+var mist = "http://openweathermap.org/img/wn/50d@2x.png";
+
+var icons = ["#img-1","#img-2","#img-3","#img-4","#img-5"];
+
+
+
+
 
 
 var days = [
@@ -89,12 +108,16 @@ $(submit).on("click", function (event) {
     }).then(function (result) {
         console.log(result);
         var dayOne = result.list[4];
-        var dayTwo = result.list[11];;
-        var dayThree = result.list[19];;
-        var dayFour = result.list[27];;
-        var dayFive = result.list[35];;
+        var dayTwo = result.list[11];
+        var dayThree = result.list[19];
+        var dayFour = result.list[27];
+        var dayFive = result.list[35];
 
-        for (i = 0; i < days.length; i++) {
+       
+
+
+
+        // setting forecast info to proper html spots
             $("#temp-1").text(days[0].temp + dayOne.main.temp);
             $("#humidity-1").text(days[0].humidity + dayOne.main.humidity);
             $("#wind-1").text(days[0].wind + dayOne.wind.speed);
@@ -131,7 +154,7 @@ $(submit).on("click", function (event) {
 
 
 
-        }
+    
 
     });
 });
