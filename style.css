@@ -16,15 +16,22 @@
     width: auto;
 }
 
-
-#recent{
-    
-    list-style-type: none;
-
-    
+/* recent search history style */
+#recent{ 
+    list-style-type: none;   
 }
+
+
+/* cards style */
 .card{
     margin: 5px;
+    background-color: rgb(155, 241, 241);
+}
+
+
+/* list item styles */
+li{
+    font-weight: bold;
 }
 
 
