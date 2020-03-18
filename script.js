@@ -31,27 +31,6 @@ $(dateFive).text("Date: " + moment().add(5, "day").format("MMM-DD-YYYY"));
 // setting the current date
 $(today).text("Today is: " + currentDate);
 
-// icon variables 
-// var foreIcons = [
-//     clearSkyDay = "http://openweathermap.org/img/wn/01d@2x.png",
-//     clearSkyNight = "http://openweathermap.org/img/wn/01n@2x.png",
-//     fewCloudsDay = "http://openweathermap.org/img/wn/02d@2x.png",
-//     fewCloudsNight = "http://openweathermap.org/img/wn/02n@2x.png",
-//     scatterdClouds = "http://openweathermap.org/img/wn/03d@2x.png",
-//     brokenClouds = "http://openweathermap.org/img/wn/04d@2x.png",
-//     showerRain = "http://openweathermap.org/img/wn/09d@2x.png",
-//     rainDay = "http://openweathermap.org/img/wn/10d@2x.png",
-//     rainNight = "http://openweathermap.org/img/wn/10n@2x.png",
-//     thunderStorm = "http://openweathermap.org/img/wn/11d@2x.png",
-//     snow = "http://openweathermap.org/img/wn/13d@2x.png",
-//     mist = "http://openweathermap.org/img/wn/50d@2x.png",
-// ];
-
-
-var icons = ["#img-1", "#img-2", "#img-3", "#img-4", "#img-5"];
-
-
-
 
 
 
@@ -70,6 +49,7 @@ var foreCast = [
 $(submit).on("click", function (event) {
     event.preventDefault();
     var input = $.trim($("#inputbox").val());
+
     if (input == "") {
         alert("Must enter a city to continue");
 
@@ -77,6 +57,8 @@ $(submit).on("click", function (event) {
 
     //   takes the value from the input box and writes to the city variable
     $(city).text("City: " + input);
+    $("#recent").append("<li>" + input + "</li>");
+
     //   clear input box after submitted (doesn't work yet)
     $(input).remove();
 
